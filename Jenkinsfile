@@ -36,7 +36,7 @@ pipeline {
 
         stage('Deploy to Linux') {
             steps {
-                sshagent(credentials: ['linux-prod-ssh']) {
+                sshagent(credentials: ['prod-ssh-key']) {
 
                     sh '''
                         rsync -az --delete \
