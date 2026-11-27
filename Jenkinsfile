@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SERVER = 'deploy@192.16.1.4'
+        SERVER = 'deploy@192.168.1.4'
         APP_DIR = '/var/www/myflaskapp'
     }
 
