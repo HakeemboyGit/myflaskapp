@@ -49,8 +49,8 @@ pipeline {
                             cd $APP_DIR &&
                             python3 -m venv venv &&
                             venv/bin/pip install -r requirements.txt &&
-                            sudo systemctl restart myflaskapp &&
-                            sudo systemctl is-active myflaskapp
+                            sudo systemctl restart gunicorn &&
+                            sudo systemctl is-active gunicorn
                         "
                     '''
                 }
